@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
+import TidyDate from "./TidyDate";
 
 export default function Weather(props){
     
@@ -11,7 +12,7 @@ export default function Weather(props){
             temp: response.data.main.temp,
             wind: response.data.wind.speed,
             city: response.data.name,
-            date: "Tuesday 9am Friday",
+            date: new Date(response.data.dt * 1000),
             humidity: response.data.main.humidity,
             details: response.data.weather[0].description,
             icon: "https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png",
@@ -32,7 +33,7 @@ export default function Weather(props){
                 <div className="currentForecast row">
                     <div className="cityHeading">
                         <h1 className="place text-capitalize" id="place"> {weatherData.city}</h1>
-                        <h1 className="day text-capitalize" >{weatherData.date}<span id="day"> </span></h1>
+                        <h1 className="day text-capitalize" > <TidyDate date={weatherData.date} /><span id="day"> </span></h1>
                     </div>
                     <div className="col-6 firstCol">
                         <img src={weatherData.icon} alt={weatherData.iconAlt} className="icon-cloudy" id="icon" />
