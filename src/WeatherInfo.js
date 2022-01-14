@@ -1,5 +1,6 @@
 import React from "react";
 import TidyDate from "./TidyDate";
+import WeatherTemp from "./WeatherTemp";
 
 export default function WeatherInfo (props){
 return(
@@ -13,10 +14,8 @@ return(
                 <img src={props.data.icon} alt={props.data.iconAlt} className="icon-cloudy" id="icon" />
             </div>
             <div className="col-6 secondCol">
-                <ul>
-                    <li className="currentTemp" id="temp"> {Math.round(props.data.temp)}º
-                    </li>
-                </ul>
+                <WeatherTemp celcius={props.data.temp} />
+                
             </div>
             <h1 className="weatherDetails text-capitalize" id="weatherDetails">{props.data.details}</h1>
             <p>

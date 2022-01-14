@@ -30,13 +30,6 @@
   margin-bottom: 30px;
 }
 
-.Weather .currentForecast {
-  border: solid #ffc8dd 1px;
-  border-radius: 30px;
-  margin: 20px auto 0;
-  padding: 10px;
-}
-
 .Weather .firstCol {
   padding-top: 10px;
 }
@@ -51,8 +44,4 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: #b591ca solid 0.1px;
-}
-
-#temp {
-  font-size: 30px;
 }
