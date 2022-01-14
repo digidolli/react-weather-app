@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className="container">
       
-      <Weather />
+      <Weather defaultCity="Tokyo"/>
       <footer>
         This project was coded by <a href="https://www.instagram.com/digidolli/" target="_blank" rel="noreferrer">digidolli</a> and is <a href="https://github.com/digidolli/react-weather-app" target="_blank" rel="noreferrer"> open-sourced on Github </a> 
       </footer>

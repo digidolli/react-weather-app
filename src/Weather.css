@@ -1,3 +1,58 @@
 .Weather {
-  border: 1px solid pink;
+  max-width: 400px;
+  display: block;
+  margin: 50px auto 10px;
+  border: double #ffc8dd;
+  border-radius: 50px;
+  border-width: 10px;
+  padding: 20px;
+  background-color: #ffafcc;
+  color: #b591ca;
+  font-family: "Courier New", Courier, monospace;
+}
+.Weather form {
+  text-align: center;
+  border: solid #ffc8dd 1px;
+  border-radius: 30px;
+  font-weight: 700;
+  padding: 15px 0;
+}
+.Weather input {
+  background-color: #ffc8dd;
+  color: #b591ca;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.Weather img {
+  margin-bottom: 30px;
+}
+
+.Weather .currentForecast {
+  border: solid #ffc8dd 1px;
+  border-radius: 30px;
+  margin: 20px auto 0;
+  padding: 10px;
+}
+
+.Weather .firstCol {
+  padding-top: 10px;
+}
+.Weather .secondCol {
+  padding-top: 30px;
+  padding-left: 0px;
+  padding-right: 65px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: #b591ca solid 0.1px;
+}
+
+#temp {
+  font-size: 30px;
 }
