@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 
 export default function Weather(props){
@@ -10,6 +11,7 @@ export default function Weather(props){
     function handleResponse(response) {
         setWeatherData({
             ready: true,
+            coordinates: response.data.coord,
             temp: response.data.main.temp,
             wind: response.data.wind.speed,
             city: response.data.name,
@@ -17,7 +19,9 @@ export default function Weather(props){
             humidity: response.data.main.humidity,
             details: response.data.weather[0].description,
             icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-            iconAlt: "hello",
+            iconAlt: response.data.weather[0].main,
+            
+
 
         });
     };
@@ -26,18 +30,15 @@ export default function Weather(props){
         const apiKey = "faa5a241d5c428a14c3417782b47bc2d";  
         let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiURL).then(handleResponse);
-
     }
 
     function handleSubmit(event){
         event.preventDefault();
         search(city);
-
     }
 
     function handleCityChange(event){
-        setCity(event.target.value);
-        
+        setCity(event.target.value);   
     }
 
     if(weatherData.ready){
@@ -49,6 +50,7 @@ export default function Weather(props){
                         <input type="submit" value="🔎" id="search-city-button" />
                     </form>
                     <WeatherInfo data={weatherData} /> 
+                    <WeatherForecast data={weatherData}/>
                 </div>   
             </div>  
         );
