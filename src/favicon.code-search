@@ -1,0 +1,14 @@
+# Query: favicon
+# ContextLines: 1
+
+2 results - 2 files
+
+public/index.html:
+  4      <meta charset="utf-8" />
+  5:     
+  6      
+
+public/manifest.json:
+  5      {
+  6:       "src": "favicon.ico",
+  7        "sizes": "64x64 32x32 24x24 16x16",
