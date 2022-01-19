@@ -1,6 +1,7 @@
 import React from "react";
 import TidyDate from "./TidyDate";
 import WeatherTemp from "./WeatherTemp";
+import "./WeatherInfo.css";
 
 export default function WeatherInfo (props){
 return(

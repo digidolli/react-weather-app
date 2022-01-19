@@ -1,3 +1,8 @@
+import React from "react";
+import "./WeatherForecastDay.css"
+
+
+
 export default function WeatherForecastDay (props) {
 
   
@@ -31,9 +36,9 @@ export default function WeatherForecastDay (props) {
         </div>
         <img src={imgUrl} alt={props.dayData.weather[0].main} className="icon-cloudy" id="icon" />                    
         <div className="forecastTemp">
-            <span className="forecastTempMax">{maxTemp()}</span>
+            <span className="forecastTempMax temp">{maxTemp()}</span>
             |
-            <span className="forcastTempMin">{minTemp()}</span>
+            <span className="forcastTempMin temp" >{minTemp()}</span>
         </div>
      </div>
 );

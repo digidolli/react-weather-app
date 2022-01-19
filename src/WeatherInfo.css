@@ -1,0 +1,37 @@
+.WeatherInfo {
+  padding: 9px;
+  margin: 10px;
+}
+.WeatherInfo #place {
+  font-size: 26px;
+  font-weight: 700;
+}
+.WeatherInfo .day {
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+.WeatherInfo img {
+  position: relative;
+  left: 35px;
+  bottom: 20px;
+  width: 110px;
+}
+.WeatherInfo .secondCol {
+  padding-top: 30px;
+  padding-left: 0px;
+  padding-right: 80px;
+  max-height: 120px;
+}
+.WeatherInfo .col-6 {
+  max-height: 120px;
+}
+.WeatherInfo .currentTemp {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+.WeatherInfo .weatherDetails {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}

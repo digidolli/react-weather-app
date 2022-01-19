@@ -1,5 +1,9 @@
 .WeatherForecast {
   text-align: center;
+  margin-top: 30px;
+  border: solid 1px pink;
+  border-radius: 20px;
+  padding: 9px;
 }
 
 .WeatherForecase .forcastTempMin {
