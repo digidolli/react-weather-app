@@ -1,7 +1,6 @@
 .WeatherInfo {
   padding: 9px;
   margin: 10px;
-  border: solid 1.5px pink;
   border-radius: 30px;
 }
 .WeatherInfo #place {
